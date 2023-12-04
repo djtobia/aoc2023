@@ -17,12 +17,12 @@ for (const [index, game] of Object.entries(input)) {
   })
   if (count !== 0) {
     const start = parseInt(index) + 1
+    const amountToAdd = totalCards[parseInt(index)];
     for (let i = start; i < start + count; i++) {
-      totalCards[i] += totalCards[parseInt(index)];
+      totalCards[i] += amountToAdd;
+      total += Math.pow(2, count - 1);
     }
-    total += Math.pow(2, count - 1);
   }
 }
-
 console.log("Part 1", total);
 console.log("Part 2", totalCards.reduce((a, b) => a + b, 0));
