@@ -72,7 +72,7 @@ export class Hand {
 
     const handArray = hand.split('').sort((a, b) => cardValsJoker[b] - cardValsJoker[a]);
     const cards: Map<string, number> = new Map();
-    for (const card of Object.keys(cardValsJoker) {
+    for (const card of Object.keys(cardValsJoker)) {
       cards.set(card, 0);
     }
     handArray.forEach(card => {
