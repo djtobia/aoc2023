@@ -28,6 +28,10 @@ export class NodeList {
     return this.nodes.find(node => node.right === right);
   }
 
+  findNodesThatEndWithA() {
+    return this.nodes.filter(node => node.value.charAt(2) === 'A');
+  }
+
 
 }
 
@@ -39,5 +43,9 @@ export class Node {
     this.value = value;
     this.left = left;
     this.right = right;
+  }
+
+  endsWithZ() {
+    return this.value.charAt(2) === "Z";
   }
 }
